@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b City:
+  = @booking.city
+%p
+  %b Start time:
+  = @booking.start_time
+%p
+  %b End time:
+  = @booking.end_time
+%p
+  %b Status:
+  = @booking.status
+
+= link_to 'Edit', edit_booking_path(@booking)
+\|
+= link_to 'Back', bookings_path

@@ -1,0 +1,26 @@
+%h1 My Bookings
+
+%table.table
+  %thead
+    %tr
+      %th City
+      %th Start time
+      %th End time
+      %th Status
+      %th
+
+  %tbody
+    - @bookings.each do |booking|
+      %tr
+        %td= booking.city
+        %td= booking.start_time
+        %td= booking.end_time
+        %td= booking.status
+        %td
+          = link_to 'Show', booking
+          = link_to 'Edit', edit_booking_path(booking)
+          = link_to 'Destroy', booking, method: :delete, data: { confirm: 'Are you sure?' }
+
+%br
+
+= link_to 'New Booking', new_booking_path

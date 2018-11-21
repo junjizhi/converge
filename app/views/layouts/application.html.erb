@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <%= render 'layouts/head' %>
+
+  <body>
+    <%= render 'layouts/navbar' %>
+    <% if notice %>
+      <p class="alert alert-success"><%= notice %></p>
+    <% end %>
+    <% if alert %>
+      <p class="alert alert-danger"><%= alert %></p>
+    <% end %>
+    <div class="container ml-10 mt-3">
+      <%= yield %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,15 @@
+<%= navbar fixed: :top, class: 'navbar-shrink', id: 'mainNav' do %>
+  <%= navbar_collapse do %>
+    <%= navbar_group class: 'branding' do %>
+      <%= brand_link 'Converge', root_path %>
+    <% end %>
+  <% end %>
+  <%= navbar_group align: 'right' do %>
+    <%= navbar_item "Bookings", bookings_path %>
+    <% if current_user.present? %>
+      <%= navbar_item "Log Out", destroy_user_session_path, nil, "data-method" => "delete" %>
+    <% else %>
+      <%= navbar_item "Log In", new_user_session_path %>
+    <% end %>
+  <% end %>
+<% end %>

@@ -1,0 +1,18 @@
+= bootstrap_form_for @booking do |f|
+  - if @booking.errors.any?
+    #error_explanation
+      %h5= "#{pluralize(@booking.errors.count, "error")} prohibited this booking from being saved:"
+      %ul
+        - @booking.errors.full_messages.each do |message|
+          %li= message
+
+  .field
+    = f.text_field :city
+  .field
+    = f.datetime_select :start_time
+  .field
+    = f.datetime_select :end_time
+  .field
+    = f.text_field :status
+  .actions
+    = f.submit 'Save'

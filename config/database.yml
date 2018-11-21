@@ -1,0 +1,21 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  url: <%= ENV['DATABASE_URL'] %>
+
+development:
+  <<: *default
+  database: converge_dev
+
+# Warning: The database defined as "test" will be erased and
+# re-generated from your development database when you run "rake".
+# Do not set this db to the same as development or production.
+test:
+  <<: *default
+  database: converge_test
+
+production:
+  <<: *default
+  database: converge_production
+  timeout: 10000
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 16 } %>
