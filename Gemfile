@@ -4,10 +4,9 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.5.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.1'
+gem 'rails', '~> 5.2.2'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
-
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
@@ -32,8 +31,6 @@ gem 'jbuilder', '~> 2.5'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
-
-gem 'devise', '>= 4.5.0'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -61,12 +58,21 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "pg", "~> 1.1"
+
+gem 'bootstrap',     '>= 4.3.1'
 gem 'material-sass', '~> 4.1.1'
 gem "font-awesome-rails", "~> 4.7"
 gem "jquery-rails", "~> 4.3"
+
 gem "rails_bootstrap_navbar", "~> 3.0"
 gem "haml-rails", "~> 1.0"
+
 gem "bootstrap_form", ">= 4.0.0"
-gem 'bootstrap', '~> 4.1.3'
 gem 'jquery-easing-rails', '~> 0.0.2'
 gem "cancancan", "~> 2.3"
+
+gem "actionview", ">= 5.2.2.1"
+gem "devise", ">= 4.6.0"
+gem "railties", ">= 5.2.2.1"
+
+

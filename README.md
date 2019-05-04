@@ -26,7 +26,7 @@ $ ruby -v
 ruby 2.5.0p0 (2017-12-25 revision 61468) [x86_64-darwin17]
 
 $ rails --version
-Rails 5.2.1
+Rails 5.2.3
 
 ```
 
